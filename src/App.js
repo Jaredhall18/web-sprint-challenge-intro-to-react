@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios'
-import Characters from './components/Characters'
+import Character from './components/Character'
 import { BASE_URL } from './constants';
+import styled from 'styled-components'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -19,18 +20,16 @@ const App = () => {
   useEffect(() => {
       axios.get(`${BASE_URL}`)
       .then(res => {
-        setCharacters(res.data);
-        console.log(res.data);
-        console.log({characters});
+        setCharacters(res.data)
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error(err))
     }, [])
-    console.log(characters);
+    console.log('characters array', characters);
 
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Characters characters={characters}/>
+      <Character characters={characters}/>
     </div>
   );
 }
