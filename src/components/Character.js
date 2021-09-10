@@ -12,9 +12,6 @@ const CharacterInfo = styled.div`
     h2, h3 {
         color: black;
     }
-
-    
-
 `
 
 const CharacterContainer = styled.div`
@@ -22,9 +19,6 @@ display:flex;
 justify-content:center;
 flex-wrap: wrap;
 `
-
-
-
 
 const Character = (props) => {
     const {characters} = props;
@@ -34,7 +28,7 @@ const Character = (props) => {
              {characters.map((res, index) => {
                  return(
                      <CharacterContainer key = {index}>
-                        <CharacterInfo>
+                        <CharacterInfo className= 'slidein'>
                             <h2>{res.name}</h2>
                             <h3>Gender: {res.gender}</h3>
                             <h3>Height: {res.height}</h3>
