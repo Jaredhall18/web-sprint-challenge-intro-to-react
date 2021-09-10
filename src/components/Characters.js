@@ -6,16 +6,16 @@ const Characters = (props) => {
 
     return (
         <div>
-             {characters.map(character => {
+             {characters.map(characters, index => {
                 return <Character 
-                // key= {character.id} 
-                name = {character.name} 
-                height = {character.height} 
-                mass = {character.mass} 
-                hair={character.hair} 
-                eyes={character.eyes} 
-                gender={character.gender} 
-                homeworld={character.homeworld} />
+                key= {index} 
+                name = {characters.name} 
+                // height = {characters.height} 
+                // mass = {characters.mass} 
+                // hair={characters.hair} 
+                // eyes={characters.eyes} 
+                // gender={characters.gender} 
+                homeworld={characters.homeworld} />
              })}
         </div>
        
