@@ -24,7 +24,7 @@ const App = () => {
     }).catch(err => console.error(err));
   }, [])
 
-
+console.log(characters);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
