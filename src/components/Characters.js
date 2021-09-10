@@ -1,21 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import Character from './Character';
+import axios from 'axios'
+
+
+
 
 const Characters = (props) => {
     const {characters} = props
 
     return (
         <div>
-             {characters.map(characters, index => {
-                return <Character 
-                key= {index} 
-                name = {characters.name} 
-                // height = {characters.height} 
-                // mass = {characters.mass} 
-                // hair={characters.hair} 
-                // eyes={characters.eyes} 
-                // gender={characters.gender} 
-                homeworld={characters.homeworld} />
+             {characters.map(res, index => {
+                 return(
+                     <div>
+                        <h1>{res.name}</h1>
+                        <h2>{res.gender}</h2>
+                        <h2>{res.homeworld}</h2>
+                     </div>
+                 );
              })}
         </div>
        
