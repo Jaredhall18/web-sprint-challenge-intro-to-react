@@ -12,7 +12,7 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [ x ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
 - [ ] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
 - [ ] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
 - [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
@@ -81,6 +81,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+React JS is a library built in JavaScript that is used to build user interfaces. An interface may have a lot of interactive parts, which means that there are a lot of different DOM elements and data that can really slow down the page. React gives us the ability to interact with individual components without the browser needing to update the entire page. Just that component can update. Additionally, using React, you can write code once for a component and construct multiple versions of a DOM element edited with unique data. An example of what that looks like is the thumbnails of listings on craigslist. This adds scalability and reusability to your code.
+
 1. Describe component state.
+
+A component has the ability to change and depending on events that occur. Component State is managed within the component to determine what changes should be made when some sort of interaction occurs. 
+
 1. Describe props.
+
+Like component state, props change how a component renders, but they are passed in to the component and the component renders the properties whereas state is a status the component will respond to by rendering a new property. Additionally, props can be passed from parent components to child components.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects occur when you pass or get information to or from somewhere outside of the scope of a function that’s being executed.  The useEffect() function is used to sync effects, you can pass different states or props in through an array [ propName ] as a second argument which will run the  method when the argument is changed.
